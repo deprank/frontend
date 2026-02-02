@@ -1,19 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['avatars.githubusercontent.com'],
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'avatars.githubusercontent.com',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+        pathname: "/**",
       },
     ],
   },
-  // Generate favicon from SVG
-  webpack(config) {
-    return config;
-  },
+  // Empty turbopack config to silence Next.js 16 warning
+  turbopack: {},
 };
 
-module.exports = nextConfig; 
+module.exports = nextConfig;
